@@ -1,0 +1,110 @@
+:root {
+	--chat-size: calc(1.6vh * 8);
+}
+
+@font-face {
+    font-family: 'Font2';
+    src: url(https://runtime.fivem.net/temp/ChaletLondonNineteenSixty.otf?a);
+}
+
+@font-face {
+    font-family: 'Font2_cond';
+    src: url(https://runtime.fivem.net/temp/chaletcomprime-colognesixty-webfont.ttf?a);
+}
+
+* {
+    font-family: inherit;
+}
+
+textarea {
+    background: transparent;
+    border: solid #333 1px;
+    padding: calc(0.28vh / 2);
+    padding-left: calc(3.5% + (0.28vh / 2));
+	
+	font-size: 1.4vh;
+}
+
+.chat-window {
+    position: absolute;
+    left: 1vh;
+    top: 1vh;
+    height: var(--chat-size) !important;
+
+    background: rgba(34,34,34,.8) !important;
+	border: solid #333 1px;
+
+    text-align: left;
+
+    user-select: none;
+}
+
+.chat-messages {
+    margin: 0;
+    height: 100%;
+}
+
+.suggestions {
+    border: solid #333 1px;
+    background: transparent;
+	
+	font-size: 1.4vh;
+}
+
+.msg {
+    font-family: Font2, sans-serif;
+    color: #fff;
+
+    font-size: 1.4vh;
+    line-height: 1.6vh;
+
+    margin-bottom: 0;
+}
+.msg > span > span > b {
+    font-family: Font2_cond, sans-serif;
+    font-weight: normal;
+
+    vertical-align: baseline;
+    padding-right: 11px;
+
+    line-height: 1;
+
+    font-size: 1.8vh;
+}
+.msg > span > span > span {
+    vertical-align: baseline;
+}
+.msg i:first-of-type {
+    font-style: normal;
+    color: #c0c0c0;
+}
+
+.chat-input {
+    position: absolute;
+    left: 1.1vh;
+    top: calc(var(--chat-size) + 1.4vh);
+
+    background: inherit !important;
+
+    height: auto;
+
+    font-family: Font2, sans-serif;
+}
+.chat-input .prefix {
+    margin: 0;
+    margin-left: 0.7%;
+    margin-top: -0.1%;
+	
+	font-size: 1.6vh;
+}
+.chat-input > div {
+    background-color: rgba(34,34,34,.8);
+    padding: calc(0.28vh / 2);
+}
+.chat-input > div + div {
+    position: absolute;
+    bottom: calc(1.65vh + 0.28vh + 0.28vh + 0.28vh + (0.28vh / 2));
+    width: 99.6%;
+
+    text-align: left;
+}
